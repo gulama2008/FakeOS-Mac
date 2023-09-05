@@ -1,0 +1,33 @@
+@use "./partials/mixins.scss";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url('../assets/mac-os-ventura-light-5k-do-1440x900.jpg');
+}
+
+
+
+.menu{
+    @include mixins.flex(row,space-between);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 25px;
+    background:linear-gradient(to right,#b6dfd1,#e4d997,#a6c2cd);
+}
+
+.list{
+    @include mixins.flex(row,space-around);
+    gap: 20px;
+    &__item{
+        list-style: none;
+        font-size: 15px;
+        &__battery{
+            height: 30px;
+        }
+    }
+}
