@@ -13,16 +13,102 @@
 <body>
     <nav class="menu">
         <div class="toolbar">
-            <ul class="list toolbar__list">
-                <li class="list__item toolbar__list__item"><i class="fa-brands fa-apple fa-lg"></i></li>
-                <li class="list__item toolbar__list__item">Finder</li>
-                <li class="list__item toolbar__list__item">File</li>
-                <li class="list__item toolbar__list__item">Edit</li>
-                <li class="list__item toolbar__list__item">View</li>
-                <li class="list__item toolbar__list__item">Go</li>
-                <li class="list__item toolbar__list__item">Window</li>
-                <li class="list__item toolbar__list__item">Help</li>
+            <ul class="list toolbar__list" id="toolbar">
+                <li class="list__item toolbar__list__item"><i class="fa-brands fa-apple fa-lg" id="appleIcon"></i></li>
+                
+                <li class="list__item toolbar__list__item" id="finder">Finder</li>
+                
+                <li class="list__item toolbar__list__item" id="file">File</li>
+                <li class="list__item toolbar__list__item" id="edit">Edit</li>
+                <li class="list__item toolbar__list__item" id="view">View</li>
+                <li class="list__item toolbar__list__item" id="go">Go</li>
+                <li class="list__item toolbar__list__item" id="window">Window</li>
+                <li class="list__item toolbar__list__item" id="help">Help</li>
             </ul>
+            <div class="sub-menu-container sub-menu-container--apple-icon" id="subMenuAppleIcon">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">About This Mac</li>
+                    <li class="sub-menu-container__list__item">System Settings...</li>
+                    <li class="sub-menu-container__list__item">App Store...</li>
+                    <li class="sub-menu-container__list__item">Sleep</li>
+                    <li class="sub-menu-container__list__item">Restart...</li>
+                    <li class="sub-menu-container__list__item">Shut Down...</li>
+                    <li class="sub-menu-container__list__item">Lock Screen</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--finder" id="subMenuFinder">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">About Finder</li>
+                    <li class="sub-menu-container__list__item">Settings...</li>
+                    <li class="sub-menu-container__list__item">Empty Bin...</li>
+                    <li class="sub-menu-container__list__item">Services</li>
+                    <li class="sub-menu-container__list__item">Hide Finder</li>
+                    <li class="sub-menu-container__list__item">Hide Others</li>
+                    <li class="sub-menu-container__list__item">Show All</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--file" id="subMenuFile">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">New Finder Window</li>
+                    <li class="sub-menu-container__list__item">New Folder</li>
+                    <li class="sub-menu-container__list__item">New Folder with Selection</li>
+                    <li class="sub-menu-container__list__item">New Smart Folder</li>
+                    <li class="sub-menu-container__list__item">New Tab</li>
+                    <li class="sub-menu-container__list__item">Open</li>
+                    <li class="sub-menu-container__list__item">Get Info</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--edit" id="subMenuEdit">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Undo Rename</li>
+                    <li class="sub-menu-container__list__item">Redo</li>
+                    <li class="sub-menu-container__list__item">Cut</li>
+                    <li class="sub-menu-container__list__item">Copy</li>
+                    <li class="sub-menu-container__list__item">Paste</li>
+                    <li class="sub-menu-container__list__item">Select All</li>
+                    <li class="sub-menu-container__list__item">Show Clipboard</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--view" id="subMenuView">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Use Stacks</li>
+                    <li class="sub-menu-container__list__item">Sort By</li>
+                    <li class="sub-menu-container__list__item">Clean Up</li>
+                    <li class="sub-menu-container__list__item">Hide Sidebar</li>
+                    <li class="sub-menu-container__list__item">Hide Toolbar</li>
+                    <li class="sub-menu-container__list__item">Show All Tabs</li>
+                    <li class="sub-menu-container__list__item">Show View Options</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--go" id="subMenuGo">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Up</li>
+                    <li class="sub-menu-container__list__item">Down</li>
+                    <li class="sub-menu-container__list__item">Previous Item</li>
+                    <li class="sub-menu-container__list__item">Next Item</li>
+                    <li class="sub-menu-container__list__item">Go to Page...</li>
+                    <li class="sub-menu-container__list__item">Back</li>
+                    <li class="sub-menu-container__list__item">Forward</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--window" id="subMenuWindow">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Minimise</li>
+                    <li class="sub-menu-container__list__item">Zoom</li>
+                    <li class="sub-menu-container__list__item">Remove Window from Set</li>
+                    <li class="sub-menu-container__list__item">Show Previous Tab</li>
+                    <li class="sub-menu-container__list__item">Show Next Tab</li>
+                    <li class="sub-menu-container__list__item">Bring All to Front</li>
+                    <li class="sub-menu-container__list__item">Documents</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--help" id="subMenuHelp">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Tips for Your Mac</li>
+                    <li class="sub-menu-container__list__item">macOS Help</li>
+                    
+                </ul>
+            </div>
         </div>
         <div class="statusbar">
             <ul class="list statusbar__list">
@@ -34,5 +120,6 @@
             </ul>
         </div>
     </nav>
+    <script src="./script.js"></script>
 </body>
 </html>

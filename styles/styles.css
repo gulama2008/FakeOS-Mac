@@ -19,12 +19,17 @@ body {
   background: linear-gradient(to right, #b6dfd1, #e4d997, #a6c2cd);
 }
 
+.toolbar {
+  position: relative;
+}
+
 .list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 20px;
+  cursor: default;
 }
 .list__item {
   list-style: none;
@@ -32,4 +37,50 @@ body {
 }
 .list__item__battery {
   height: 30px;
+}
+
+.sub-menu-container {
+  display: none;
+  position: absolute;
+  top: 20px;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 10px;
+}
+.sub-menu-container__list {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: default;
+}
+.sub-menu-container__list__item {
+  padding: 5px 100px 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.sub-menu-container__list__item:hover {
+  background-color: #4c9afd;
+  color: white;
+}
+.sub-menu-container--finder {
+  left: 30px;
+}
+.sub-menu-container--file {
+  left: 90px;
+}
+.sub-menu-container--edit {
+  left: 135px;
+}
+.sub-menu-container--view {
+  left: 175px;
+}
+.sub-menu-container--go {
+  left: 230px;
+}
+.sub-menu-container--window {
+  left: 270px;
+}
+.sub-menu-container--help {
+  left: 340px;
 }
