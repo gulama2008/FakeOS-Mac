@@ -84,3 +84,11 @@ body {
 .sub-menu-container--help {
   left: 340px;
 }
+
+.hide-sub-menu {
+  display: none;
+}
+
+.show-sub-menu {
+  display: block;
+}

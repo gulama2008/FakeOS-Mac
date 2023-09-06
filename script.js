@@ -1,6 +1,6 @@
 const toolbar = document.querySelector(".toolbar__list");
 const subMenuContainers = document.querySelectorAll('.sub-menu-container');
-
+const dateAndTime = document.querySelector('#dateAndTime');
 function showSubMenu(event) { 
     subMenuContainers.forEach(element => { 
         element.style.display = "none";
@@ -38,3 +38,29 @@ function showSubMenu(event) {
     }
 };
 window.addEventListener('click', showSubMenu);
+
+
+function showCurrentDateAndTime() { 
+  let now = new Date();
+  let dateArr = now
+    .toLocaleDateString("en-us", {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+    })
+    .replaceAll(",", "").split(" ");
+  const temp = dateArr[1];
+  dateArr[1] = dateArr[2];
+  dateArr[2] = temp;
+  const dateStr = dateArr.join(" ");
+  const timeStr = now.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute:"2-digit",
+    hour12: true,
+  });
+  const dateAndTimeStr = dateStr + " " + timeStr;
+  dateAndTime.innerHTML = dateAndTimeStr;
+  
+}
+
+setInterval(showCurrentDateAndTime, 1000);
