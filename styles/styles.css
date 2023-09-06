@@ -5,10 +5,15 @@
 }
 
 body {
+  height: 100vh;
   background-image: url("../assets/mac-os-ventura-light-5k-do-1440x900.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
-.menu {
+.top-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -85,10 +90,29 @@ body {
   left: 340px;
 }
 
-.hide-sub-menu {
-  display: none;
+.bottom-menu {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 8px 8px 10px 8px;
+  margin-bottom: 5px;
 }
 
-.show-sub-menu {
-  display: block;
+.app {
+  height: 50px;
+}
+.app__icon {
+  height: 100%;
+}
+.app__icon--finder {
+  border-radius: 500px;
+}
+.app__icon--bin {
+  border-left: 1px solid rgba(92, 88, 88, 0.5);
+  padding-left: 10px;
 }
