@@ -20,7 +20,7 @@ body {
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  height: 25px;
+  height: 30px;
   background: linear-gradient(to right, #b6dfd1, #e4d997, #a6c2cd);
 }
 
@@ -33,12 +33,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
   cursor: default;
 }
 .list__item {
   list-style: none;
   font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 3px;
 }
 .list__item__battery {
   height: 30px;
@@ -47,7 +48,7 @@ body {
 .sub-menu-container {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 30px;
   z-index: 9999;
   background: rgba(255, 255, 255, 0.8);
   padding: 5px;

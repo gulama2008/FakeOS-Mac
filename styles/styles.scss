@@ -1,4 +1,5 @@
 @use "./partials/mixins.scss";
+@use "./partials/colors.scss";
 
 *{
     margin: 0px;
@@ -17,8 +18,9 @@ body{
     @include mixins.flex(row,space-between);
     padding-left: 20px;
     padding-right: 20px;
-    height: 25px;
+    height: 30px;
     background:linear-gradient(to right,#b6dfd1,#e4d997,#a6c2cd);
+    
 }
 
 .toolbar{
@@ -27,12 +29,12 @@ body{
 
 .list{
     @include mixins.flex(row,space-around);
-    gap: 20px;
     cursor: default;
     &__item{
         list-style: none;
         font-size: 15px;
-        
+        padding: 6px 10px;
+        border-radius: 3px;
         &__battery{
             height: 30px;
         }
@@ -42,7 +44,7 @@ body{
 .sub-menu-container{
     display: none;
     position: absolute;
-    top: 20px;
+    top: 30px;
     z-index: 9999;
     background:rgba(255,255,255,0.8);
     padding: 5px;
@@ -86,12 +88,7 @@ body{
         left:340px;
     }
 }
-// .hide-sub-menu{
-//     display: none;
-// }
-// .show-sub-menu{
-//     display: block;
-// }
+
 
 .bottom-menu{
     align-self: center;
@@ -116,3 +113,14 @@ body{
         }
     }
 }
+
+// .apple-icon{
+//     position: relative;
+//     width: 20px;
+//     height: 15px;
+//     &__img{
+//         position: absolute;
+//         top:12px;
+//         left: 14px;
+//     }
+// }
