@@ -1,0 +1,126 @@
+@use "./partials/mixins.scss";
+@use "./partials/colors.scss";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url('../assets/mac-os-ventura-light-5k-do-1440x900.jpg');
+    @include mixins.flex(column,space-between,stretch);
+    
+}
+
+.top-menu{
+    @include mixins.flex(row,space-between);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30px;
+    background:linear-gradient(to right,#b6dfd1,#e4d997,#a6c2cd);
+    
+}
+
+.toolbar{
+    position: relative;
+}
+
+.list{
+    @include mixins.flex(row,space-around);
+    cursor: default;
+    &__item{
+        list-style: none;
+        font-size: 15px;
+        padding: 6px 10px;
+        border-radius: 3px;
+        &__battery{
+            height: 30px;
+        }
+    }
+}
+
+.sub-menu-container{
+    display: none;
+    position: absolute;
+    top: 30px;
+    z-index: 9999;
+    background:rgba(255,255,255,0.8);
+    padding: 5px;
+    border-radius: 10px;
+    &__list{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: default;
+        &__item{
+            padding: 5px 100px 5px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            &:hover{
+                background-color: #4c9afd;
+                color: white;
+            }
+        }
+    }
+    &--apple-icon{
+    }
+    &--finder{
+        left:30px;
+    }
+    &--file{
+        left:90px;
+    }
+    &--edit{
+        left:135px;
+    }
+    &--view{
+        left:175px;
+    }
+    &--go{
+        left:230px;
+    }
+    &--window{
+        left:270px;
+    }
+    &--help{
+        left:340px;
+    }
+}
+
+
+.bottom-menu{
+    align-self: center;
+    @include mixins.flex(row,space-around,center);
+    gap: 10px;
+    background:rgba(255,255,255,0.5);
+    border-radius: 15px;
+    padding: 8px 8px 10px 8px;
+    margin-bottom: 5px;
+}
+
+.app{
+    height: 50px;
+    &__icon{
+        height: 100%;
+        &--finder{
+            border-radius: 500px;
+        }
+        &--bin{
+            border-left: 1px solid rgba(92, 88, 88, 0.5);
+            padding-left: 10px;
+        }
+    }
+}
+
+// .apple-icon{
+//     position: relative;
+//     width: 20px;
+//     height: 15px;
+//     &__img{
+//         position: absolute;
+//         top:12px;
+//         left: 14px;
+//     }
+// }
