@@ -91,6 +91,13 @@ body {
   left: 340px;
 }
 
+.bottom-menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
 .bottom-menu {
   align-self: center;
   display: flex;
@@ -102,6 +109,15 @@ body {
   border-radius: 15px;
   padding: 8px 8px 10px 8px;
   margin-bottom: 5px;
+  transform: translateY(130%);
+  transition-timing-function: ease-in;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.end-of-browser {
+  align-self: stretch;
+  height: 2px;
 }
 
 .app {
@@ -116,4 +132,11 @@ body {
 .app__icon--bin {
   border-left: 1px solid rgba(92, 88, 88, 0.5);
   padding-left: 10px;
+}
+
+.ease-in {
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  transform: translateY(0);
+  opacity: 1;
 }
