@@ -13,7 +13,10 @@ export function closeNotes() {
 }
 
 export function saveNote() { 
-    const currentNote = { title:noteTitle.value, content:noteContent.value ,id:Date.now()};
+    const titleContent = noteTitle.value ? noteTitle.value : "New Note";
+    console.log(noteTitle.value);
+    console.log(titleContent);
+    const currentNote = { title:titleContent, content:noteContent.value ,id:Date.now()};
     let notesList = [];
     const notesListJson = window.sessionStorage.getItem('notes');
     if (notesListJson) { 
@@ -43,18 +46,24 @@ export function renderNotes() {
 }
 
 export function deleteNote(currentNote) { 
-    console.log(currentNote);
     const currentNotesList = JSON.parse(window.sessionStorage.getItem('notes'));
     const newNotesList = currentNotesList.filter(note => {
-        console.log(currentNote.getAttribute('id'));
-        console.log(note.id);
         return note.id != currentNote.getAttribute('id')
     });
-    console.log(newNotesList);
     window.sessionStorage.setItem("notes", JSON.stringify(newNotesList));
     renderNotes();
     noteTitle.value = "";
     noteContent.value = "";
+}
+
+export function showNote(titleNode){ 
+    const currentNotesList = JSON.parse(window.sessionStorage.getItem("notes"));
+    let activeNoteId = titleNode.getAttribute('id');
+    let currentNote = currentNotesList.find(note => note.id == activeNoteId);
+    console.log(currentNote);
+    console.log(currentNote["title"]);
+    noteTitle.value = currentNote['title'];
+    noteContent.value = currentNote['content'];
 }
 
 
