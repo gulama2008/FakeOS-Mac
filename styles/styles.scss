@@ -105,7 +105,7 @@ body{
     margin-bottom: 5px;
     transform: translateY(130%);
     transition-timing-function: ease-in;
-    transition: 0.2s;
+    transition: 0.5s;
     opacity: 0;
 }
 
@@ -129,7 +129,7 @@ body{
 }
 
 .ease-in {
-  transition: 0.25s;
+  transition: 0.3s;
   transition-timing-function: ease-out;
   transform: translateY(0);
   opacity: 1;
@@ -178,6 +178,10 @@ body{
     // background-color: #a6c2cd;
     height: 100%;
     width: 25%;
+    &__list{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .main__content{
@@ -192,7 +196,9 @@ body{
         padding: 20px;
         padding-bottom: 0px;
         font-size: 30px;
-        padding: 20px;
+        &::placeholder{
+            color: #a0a0a0;
+        }
     }
     &__text{
         resize: none;
@@ -201,6 +207,28 @@ body{
         width: 485px;
         height: 510px;
         padding:20px;
+        border-bottom-right-radius: 12px;
     }
+}
+
+.hide-element{
+    display: none;
+}
+
+.show-element{
+    display: block;
+}
+
+.notes-list{
+    list-style: none;
+    padding: 15px 15px 15px 10px;
+    border-bottom: 1px solid #e9e9e9;
+    border-radius: 5px;
+    font-weight:500;
+    cursor: default;
+}
+
+.current-note{
+    background-color: #ffe491;
 }
 

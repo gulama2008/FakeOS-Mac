@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a63a61f3e0.js" crossorigin="anonymous"></script>
     <script defer type="module" src="./script.js"></script>
     <title>Document</title>
@@ -122,10 +122,10 @@
             </ul>
         </div>
     </nav>
-    <div class="app-notes">
+    <div class="app-notes hide-element">
         <div class="app-notes__nav">
             <div class="nav__icon-container nav__icon-container--small-gap">
-                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close">
                 <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
                 <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
             </div>
@@ -134,10 +134,11 @@
                 <img src="./assets/gallery-view-icon.png" alt="" class="nav__icon-container__img">
             </div>
             <div class="nav__icon-container">
-                <img src="./assets/notes-bin-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/notes-bin-icon.png" alt="" class="nav__icon-container__img" id="deleteNoteIcon">
             </div>
             <div class="nav__icon-container">
                 <img src="./assets/create-note-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/save-icon.png" alt="" class="nav__icon-container__img" id="saveNoteIcon">
             </div>
             <div class="nav__icon-container">
                 <img src="./assets/text-style-icon.png" alt="" class="nav__icon-container__img">
@@ -152,12 +153,14 @@
             </div>
         </div>
         <div class="app-notes__main">
-            <aside class="main__titles">
+            <aside class="main__titles" >
+                <ul class="main__titles__list" id="notesList">
 
+                </ul>
             </aside>
             <div class="main__content">
-                <input type="text" class="main__content__title" placeholder="Note Title">
-                <textarea class="main__content__text" name="textArea" id="textArea"></textarea>
+                <input type="text" class="main__content__title" id="noteTitle" placeholder="Note Title">
+                <textarea class="main__content__text" id="noteContent"></textarea>
             </div>
         </div>
     </div>
@@ -167,7 +170,7 @@
             <div class="app-icon"><img src="./assets/safari-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/mail-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/photo-icon.png" alt="" class="app-icon__img"></div>
-            <div class="app-icon"><img src="./assets/notes-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon app-icon__notes"><img src="./assets/notes-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/app-store-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/system-setting-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/bin-icon.png" alt="" class="app-icon__img app-icon__img--bin"></div>
