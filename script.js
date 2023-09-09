@@ -1,6 +1,6 @@
 import { showSubMenu, showCurrentDateAndTime, showSubMenuWhenHover } from "./scripts/top-menu-bar.js";
 import { showBottomAppBar, hideBottomAppBar } from "./scripts/bottom-app-bar.js";
-import { closeNotes,saveNote,renderNotes,openNotes,deleteNote}from "./scripts/app-notes.js"
+import { closeNotes,saveNote,renderNotes,openNotes,deleteNote,showNote}from "./scripts/app-notes.js"
 const toolbarMenu = document.querySelectorAll(".toolbar__list__item");
 const appleIcon = document.querySelector('#appleIcon');
 const appleIconImg = document.querySelector('#appleIconImg');
@@ -38,7 +38,7 @@ notesList.addEventListener('click', (e) => {
     });
     e.target.classList.add("current-note");
   }
-  
+  showNote(currentNote);
 })
 
 deleteCurrentNote.addEventListener('click', e => { deleteNote(currentNote)});
