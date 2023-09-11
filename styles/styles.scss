@@ -134,15 +134,18 @@ body{
   transform: translateY(0);
   opacity: 1;
 }
-
-.app-notes{
-    @include mixins.flex(column,flex-start,stretch);
+.app{
     align-self: center;
     height: 600px;
     width: 700px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 20px;
+}
+
+.app-notes{
+    @include mixins.flex(column,flex-start,stretch);
     &__nav{
         @include mixins.flex(row,space-around,center);
         height: 50px;
@@ -231,5 +234,25 @@ body{
 
 .current-note{
     background-color: #ffe491;
+}
+
+.app-photos{
+    @include mixins.flex(row,center,stretch);
+    &__nav{
+        width: 25%;
+        height: 100%;
+        background-color: #e3dddc;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    &__main{
+        width: 75%;
+    }
+}
+
+.nav__icon-container--close{
+    @include mixins.flex(row,flex-start,center);
+    height: 50px;
+    padding-left: 20px;
 }
 
