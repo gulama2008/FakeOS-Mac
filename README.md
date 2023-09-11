@@ -23,7 +23,7 @@ This FakeOS has the following features:
 - When open the Finder app, a window will display which contains a side menu bar and the content section, the content section contains several folder icons in it
 - When open the Photos app, a window will display which contains a side menu bar and the content section, the content section contains photos in it
 - when open the Notes app, a notes window will display, the left side is the current notes already created, the right side is where showing the current note title and contents, or empty for creating new note
-- The Notes app also has delete function shown as a bin icon and a save function shown as a disk icon on the top, when clicking on an existing note on the left side, clicking on the bin icon will delete it. And when creating new note, clicking the save icon will save it to the left side notes list
+- The Notes app also has delete function shown as a bin icon, a save function shown as a disk icon and a create new note function shown as a pencil and paper icon on the top. When clicking on an existing note on the left side, clicking on the bin icon will delete it. When click the create new notes icon, the note title and content will be empty for creating new note, the background color for the active note on the left will also disappear. And when creating new note, clicking the save icon will save it to the left side notes list
 
 ## Contact
 If you have additional questions, please contact me at:    
