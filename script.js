@@ -1,6 +1,6 @@
 import { showSubMenu, showCurrentDateAndTime, showSubMenuWhenHover } from "./scripts/top-menu-bar.js";
 import { showBottomAppBar, hideBottomAppBar } from "./scripts/bottom-app-bar.js";
-import { closeNotes, saveNote, renderNotes, openNotes, deleteNote, showNote } from "./scripts/app-notes.js";
+import { closeNotes, saveNote, renderNotes, openNotes, deleteNote, showNote,createNote} from "./scripts/app-notes.js";
 import { activeAppSubmenu, closePhotos, openPhotos, activeHeaderMenu } from "./scripts/app-photos.js";
 import { openFinder,closeFinder} from './scripts/app-finder.js'
 const toolbarMenu = document.querySelectorAll(".toolbar__list__item");
@@ -14,6 +14,7 @@ const closeNotesIcon = document.querySelector('.icon--close-notes');
 const saveNotes = document.querySelector("#saveNoteIcon");
 const notesList = document.querySelector('#notesList');
 const deleteCurrentNote = document.querySelector("#deleteNoteIcon");
+const createNoteIcon = document.querySelector("#createNoteIcon");
 const appSubmenus = document.querySelectorAll(".menu__submenu-list__item");
 const closePhotosIcon = document.querySelector('.icon--close-photos')
 const photosIcon = document.querySelector(".app-icon__photos");
@@ -52,7 +53,10 @@ notesList.addEventListener('click', (e) => {
 })
 
 deleteCurrentNote.addEventListener('click', e => { deleteNote(currentNote) });
-
+createNoteIcon.addEventListener('click', (e) => { 
+  currentNote = "";
+  createNote();
+})
 appSubmenus.forEach((submenu) => {
   
   submenu.addEventListener("click", activeAppSubmenu);

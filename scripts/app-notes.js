@@ -66,5 +66,15 @@ export const showNote=(titleNode)=>{
     noteContent.value = currentNote['content'];
 }
 
+export const createNote = () => {
+    if (notesList.childNodes) {
+      notesList.childNodes.forEach((child) => {
+        child.classList.remove("current-note");
+      });
+    }
+    noteTitle.value = "";
+    noteContent.value = "";
+ }
+
 
 
