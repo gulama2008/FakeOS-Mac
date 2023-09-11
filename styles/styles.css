@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   height: 100vh;
   background-image: url("../assets/mac-os-ventura-light-5k-do-1440x900.jpg");
   display: flex;
@@ -153,6 +154,9 @@ body {
 }
 
 .app-notes {
+  position: absolute;
+  top: 50px;
+  left: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -237,14 +241,6 @@ body {
   border-bottom-right-radius: 12px;
 }
 
-.hide-element {
-  display: none;
-}
-
-.show-element {
-  display: block;
-}
-
 .notes-list {
   list-style: none;
   padding: 15px 15px 15px 10px;
@@ -259,6 +255,9 @@ body {
 }
 
 .app-photos {
+  position: absolute;
+  top: 50px;
+  left: 300px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -282,4 +281,83 @@ body {
   align-items: center;
   height: 50px;
   padding-left: 20px;
+}
+
+.app-photos__nav__menu {
+  color: #a39d9c;
+  margin: 0px 10px;
+}
+
+.photos__section {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.photos__submenu-list {
+  list-style: none;
+  cursor: default;
+}
+.photos__submenu-list__item {
+  color: #474646;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.active-photos-submenu {
+  background-color: #4c9fff;
+  color: white;
+}
+
+.app-photos__main__header {
+  height: 50px;
+  cursor: default;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.app-photos__main__header__span {
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #737373;
+  border-radius: 5px;
+}
+.app-photos__main__gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 10px;
+}
+
+.app-photos__main__header__span-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+}
+
+.with-border {
+  border-right: 1px solid #f2f2f2;
+}
+
+.gallery__photo {
+  width: 30%;
+}
+
+.active-header-menu {
+  background-color: #f2f2f2;
+}
+
+.hide-element {
+  visibility: hidden;
+}
+
+.show-element {
+  visibility: visible;
 }

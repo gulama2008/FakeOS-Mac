@@ -1,6 +1,7 @@
 import { showSubMenu, showCurrentDateAndTime, showSubMenuWhenHover } from "./scripts/top-menu-bar.js";
 import { showBottomAppBar, hideBottomAppBar } from "./scripts/bottom-app-bar.js";
-import { closeNotes,saveNote,renderNotes,openNotes,deleteNote,showNote}from "./scripts/app-notes.js"
+import { closeNotes, saveNote, renderNotes, openNotes, deleteNote, showNote } from "./scripts/app-notes.js";
+import { activePhotosSubmenu ,closePhotos,openPhotos,activeHeaderMenu} from "./scripts/app-photos.js";
 const toolbarMenu = document.querySelectorAll(".toolbar__list__item");
 const appleIcon = document.querySelector('#appleIcon');
 const appleIconImg = document.querySelector('#appleIconImg');
@@ -8,10 +9,16 @@ const endOfBrowser = document.querySelector("#endOfBrowser");
 const bottomMenuContainer = document.querySelector('.bottom-menu-container');
 const bottomMenu=document.querySelector('.bottom-menu')
 const notesIcon = document.querySelector(".app-icon__notes");
-const close = document.querySelector('.icon--close');
+const closeNotesIcon = document.querySelector('.icon--close-notes');
 const saveNotes = document.querySelector("#saveNoteIcon");
 const notesList = document.querySelector('#notesList');
 const deleteCurrentNote = document.querySelector("#deleteNoteIcon");
+const photosSubmenus = document.querySelectorAll(".photos__submenu-list__item");
+const closePhotosIcon = document.querySelector('.icon--close-photos')
+const photosIcon = document.querySelector(".app-icon__photos");
+const photosHeaderMenus = document.querySelectorAll(
+  ".app-photos__main__header__span"
+);
 let currentNote;
 
 window.addEventListener("click", showSubMenu);
@@ -27,7 +34,7 @@ endOfBrowser.addEventListener('mouseover', showBottomAppBar);
 
 bottomMenuContainer.addEventListener('mouseleave', hideBottomAppBar);
 notesIcon.addEventListener('click', openNotes)
-close.addEventListener('click', closeNotes);
+closeNotesIcon.addEventListener('click', closeNotes);
 saveNotes.addEventListener('click', saveNote);
 
 notesList.addEventListener('click', (e) => { 
@@ -41,4 +48,16 @@ notesList.addEventListener('click', (e) => {
   showNote(currentNote);
 })
 
-deleteCurrentNote.addEventListener('click', e => { deleteNote(currentNote)});
+deleteCurrentNote.addEventListener('click', e => { deleteNote(currentNote) });
+
+photosSubmenus.forEach((submenu) => {
+  
+  submenu.addEventListener("click", activePhotosSubmenu);
+});
+
+closePhotosIcon.addEventListener('click', closePhotos);
+photosIcon.addEventListener('click', openPhotos);
+
+photosHeaderMenus.forEach((menu) => {
+  menu.addEventListener('click', activeHeaderMenu)
+});

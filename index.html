@@ -125,7 +125,7 @@
     <div class="app app-notes hide-element">
         <div class="app-notes__nav">
             <div class="nav__icon-container nav__icon-container--small-gap">
-                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close-notes">
                 <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
                 <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
             </div>
@@ -152,7 +152,7 @@
                 <img src="./assets/search-icon.png" alt="" class="nav__icon-container__img">
             </div>
         </div>
-        <div class="app app-notes__main">
+        <div class="app-notes__main">
             <aside class="main__titles" >
                 <ul class="main__titles__list" id="notesList">
 
@@ -164,47 +164,65 @@
             </div>
         </div>
     </div>
-    <div class="app app-photos">
+    <div class="app app-photos hide-element">
         <div class="app-photos__nav">
             <div class="nav__icon-container nav__icon-container--small-gap nav__icon-container--close">
-                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close-photos">
                 <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
                 <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
             </div>
             <div class="app-photos__nav__menu">
-                <div>Photos</div>
-                <ul>
-                    <li>Library</li>
-                    <li>Memories</li>
-                    <li>People</li>
-                    <li>Places</li>
-                    <li>Recent</li>
-                    <li>Imports</li>
+                <div class="photos__section">Photos</div>
+                <ul class="photos__submenu-list">
+                    <li class="photos__submenu-list__item active-photos-submenu">Library</li>
+                    <li class="photos__submenu-list__item">Memories</li>
+                    <li class="photos__submenu-list__item">People</li>
+                    <li class="photos__submenu-list__item">Places</li>
+                    <li class="photos__submenu-list__item">Recent</li>
+                    <li class="photos__submenu-list__item">Imports</li>
                 </ul>
             </div>
             <div class="app-photos__nav__menu">
-                <div>Albums</div>
-                <ul>
-                    <li>Media Types</li>
-                    <li>Shared Albums</li>
-                    <li>My Albums</li>
+                <div class="photos__section">Albums</div>
+                <ul class="photos__submenu-list">
+                    <li class="photos__submenu-list__item">Media Types</li>
+                    <li class="photos__submenu-list__item">Shared Albums</li>
+                    <li class="photos__submenu-list__item">My Albums</li>
                 </ul>
             </div>
             <div class="app-photos__nav__menu">
-                <div>Projects</div>
-                <ul>
-                    <li>My Projects</li>
+                <div class="photos__section">Projects</div>
+                <ul class="photos__submenu-list">
+                    <li class="photos__submenu-list__item">My Projects</li>
                 </ul>
             </div>
         </div>
-        <div class="app-photos__main"></div>
+        <div class="app-photos__main">
+            <div class="app-photos__main__header">
+                <div class="app-photos__main__header__span-container">
+                    <span class="app-photos__main__header__span with-border">Years</span>
+                    <span class="app-photos__main__header__span with-border">Months</span>
+                    <span class="app-photos__main__header__span with-border">Days</span>
+                    <span class="app-photos__main__header__span active-header-menu">All Photos</span>
+                </div>
+                
+            </div>
+            <div class="app-photos__main__gallery">
+                <img class="gallery__photo" src="./assets/pet.webp" alt="">
+                <img class="gallery__photo" src="./assets/blog.webp" alt="">
+                <img class="gallery__photo" src="./assets/movie.webp" alt="">
+                <img class="gallery__photo" src="./assets/shopping.webp" alt="">
+                <img class="gallery__photo" src="./assets/weather.webp" alt="">
+                <img class="gallery__photo" src="./assets/note.webp" alt="">
+            </div>
+        </div>
     </div>
     <div class="bottom-menu-container">
         <section class="bottom-menu">
             <div class="app-icon"><img src="./assets/finder-icon.png" alt="" class="app-icon__img app-icon__img--finder"></div>
             <div class="app-icon"><img src="./assets/safari-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><a href="mailto:email@example.com" ><img src="./assets/mail-icon.png" alt="" class="app-icon__img"></a></div>
-            <div class="app-icon"><img src="./assets/photo-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon app-icon__photos" ><img src="./assets/photo-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon app-icon__notes"><img src="./assets/notes-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/app-store-icon.png" alt="" class="app-icon__img"></div>
             <div class="app-icon"><img src="./assets/system-setting-icon.png" alt="" class="app-icon__img"></div>
