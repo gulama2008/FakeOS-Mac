@@ -1,11 +1,11 @@
-const photosSubmenus = document.querySelectorAll(".photos__submenu-list__item");
+const appSubmenus = document.querySelectorAll(".menu__submenu-list__item");
 const photosApp = document.querySelector('.app-photos');
 const headerMenus = document.querySelectorAll(".app-photos__main__header__span");
-export const activePhotosSubmenu = (event) => {
-    photosSubmenus.forEach(submenu => { 
-        submenu.classList.remove("active-photos-submenu");
+export const activeAppSubmenu = (event) => {
+    appSubmenus.forEach(submenu => { 
+        submenu.classList.remove("active-submenu");
     })
-  event.target.classList.add("active-photos-submenu");
+  event.target.classList.add("active-submenu");
 };
 
 export const openPhotos = () => {
