@@ -302,7 +302,7 @@ body{
         }
     }
     &__content{
-        @include mixins.flex(row,center,flex-start);
+        @include mixins.flex(row,flex-start,flex-start);
         flex-wrap: wrap;
         gap: 20px;
         padding: 10px 10px;

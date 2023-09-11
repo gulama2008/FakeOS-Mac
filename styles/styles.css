@@ -332,7 +332,7 @@ body {
 .apps__main__content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
