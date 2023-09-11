@@ -260,7 +260,7 @@ body {
   background-color: #ffe491;
 }
 
-.app-photos {
+.apps {
   position: absolute;
   top: 50px;
   left: 300px;
@@ -269,14 +269,14 @@ body {
   justify-content: center;
   align-items: stretch;
 }
-.app-photos__nav {
+.apps__nav {
   width: 25%;
   height: 100%;
   background-color: #e3dddc;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
-.app-photos__main {
+.apps__main {
   width: 75%;
 }
 
@@ -289,33 +289,33 @@ body {
   padding-left: 20px;
 }
 
-.app-photos__nav__menu {
+.apps__nav__menu {
   color: #a39d9c;
   margin: 0px 10px;
 }
 
-.photos__section {
+.menu__section {
   padding: 10px;
   font-size: 13px;
 }
 
-.photos__submenu-list {
+.menu__submenu-list {
   list-style: none;
   cursor: default;
 }
-.photos__submenu-list__item {
+.menu__submenu-list__item {
   color: #474646;
   font-size: 14px;
   padding: 8px 20px;
   border-radius: 5px;
 }
 
-.active-photos-submenu {
+.active-submenu {
   background-color: #4c9fff;
   color: white;
 }
 
-.app-photos__main__header {
+.apps__main__header {
   height: 50px;
   cursor: default;
   display: flex;
@@ -323,13 +323,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-.app-photos__main__header__span {
+.apps__main__header__span {
   padding: 5px 15px;
   font-size: 14px;
   color: #737373;
   border-radius: 5px;
 }
-.app-photos__main__gallery {
+.apps__main__content {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -339,7 +339,7 @@ body {
   padding: 10px 10px;
 }
 
-.app-photos__main__header__span-container {
+.apps__main__header__span-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -354,6 +354,37 @@ body {
 
 .gallery__photo {
   width: 30%;
+}
+
+.finder__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.finder__header--recent {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+}
+.finder__header--gallary-view {
+  border-radius: 5px;
+}
+
+.finder__folder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 80px;
+  margin-top: 20px;
+}
+.finder__folder__icon {
+  width: 75%;
+}
+.finder__folder__name {
+  font-size: 12px;
 }
 
 .active-header-menu {

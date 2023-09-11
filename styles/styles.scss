@@ -239,7 +239,7 @@ body{
     background-color: #ffe491;
 }
 
-.app-photos{
+.apps{
     position: absolute;
     top: 50px;
     left: 300px;
@@ -262,18 +262,18 @@ body{
     padding-left: 20px;
 }
 
-.app-photos__nav__menu{
+.apps__nav__menu{
     color: #a39d9c;
     margin: 0px 10px;
 
 }
 
-.photos__section{
+.menu__section{
     padding: 10px;
     font-size: 13px;
 }
 
-.photos__submenu-list{
+.menu__submenu-list{
     list-style: none;
     cursor: default;
     &__item{
@@ -284,12 +284,12 @@ body{
     }
 }
 
-.active-photos-submenu{
+.active-submenu{
     background-color: #4c9fff;
     color: white;
 }
 
-.app-photos__main{
+.apps__main{
     &__header{
         height: 50px;
         cursor: default;
@@ -301,7 +301,7 @@ body{
             border-radius: 5px;
         }
     }
-    &__gallery{
+    &__content{
         @include mixins.flex(row,center,flex-start);
         flex-wrap: wrap;
         gap: 20px;
@@ -309,7 +309,7 @@ body{
     }
 }
 
-.app-photos__main__header__span-container{
+.apps__main__header__span-container{
     @include mixins.flex(row,center,center);
     border: 1px solid #f2f2f2;
     border-radius: 8px;
@@ -321,6 +321,31 @@ body{
 
 .gallery__photo{
     width: 30%;
+}
+
+.finder__header{
+    @include mixins.flex(row,space-around,center);
+    &--recent{
+        color: #575757;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    &--gallary-view{
+        border-radius: 5px
+    }
+}
+
+.finder__folder{
+    @include mixins.flex(column,flex-start,center);
+    gap:20px;
+    width: 80px;
+    margin-top: 20px;
+    &__icon{
+        width: 75%;
+    }
+    &__name{
+        font-size: 12px;
+    }
 }
 
 .active-header-menu{

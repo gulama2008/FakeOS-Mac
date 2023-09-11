@@ -1,7 +1,8 @@
 import { showSubMenu, showCurrentDateAndTime, showSubMenuWhenHover } from "./scripts/top-menu-bar.js";
 import { showBottomAppBar, hideBottomAppBar } from "./scripts/bottom-app-bar.js";
 import { closeNotes, saveNote, renderNotes, openNotes, deleteNote, showNote } from "./scripts/app-notes.js";
-import { activePhotosSubmenu ,closePhotos,openPhotos,activeHeaderMenu} from "./scripts/app-photos.js";
+import { activeAppSubmenu, closePhotos, openPhotos, activeHeaderMenu } from "./scripts/app-photos.js";
+import { openFinder,closeFinder} from './scripts/app-finder.js'
 const toolbarMenu = document.querySelectorAll(".toolbar__list__item");
 const appleIcon = document.querySelector('#appleIcon');
 const appleIconImg = document.querySelector('#appleIconImg');
@@ -13,12 +14,14 @@ const closeNotesIcon = document.querySelector('.icon--close-notes');
 const saveNotes = document.querySelector("#saveNoteIcon");
 const notesList = document.querySelector('#notesList');
 const deleteCurrentNote = document.querySelector("#deleteNoteIcon");
-const photosSubmenus = document.querySelectorAll(".photos__submenu-list__item");
+const appSubmenus = document.querySelectorAll(".menu__submenu-list__item");
 const closePhotosIcon = document.querySelector('.icon--close-photos')
 const photosIcon = document.querySelector(".app-icon__photos");
 const photosHeaderMenus = document.querySelectorAll(
   ".app-photos__main__header__span"
 );
+const closeFinderIcon = document.querySelector(".icon--close-finder");
+const FinderIcon = document.querySelector(".app-icon__finder");
 let currentNote;
 
 window.addEventListener("click", showSubMenu);
@@ -50,9 +53,9 @@ notesList.addEventListener('click', (e) => {
 
 deleteCurrentNote.addEventListener('click', e => { deleteNote(currentNote) });
 
-photosSubmenus.forEach((submenu) => {
+appSubmenus.forEach((submenu) => {
   
-  submenu.addEventListener("click", activePhotosSubmenu);
+  submenu.addEventListener("click", activeAppSubmenu);
 });
 
 closePhotosIcon.addEventListener('click', closePhotos);
@@ -61,3 +64,6 @@ photosIcon.addEventListener('click', openPhotos);
 photosHeaderMenus.forEach((menu) => {
   menu.addEventListener('click', activeHeaderMenu)
 });
+
+closeFinderIcon.addEventListener('click', closeFinder);
+FinderIcon.addEventListener('click', openFinder);
