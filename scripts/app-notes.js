@@ -3,16 +3,16 @@ const notesList = document.querySelector('#notesList');
 const noteTitle = document.querySelector("#noteTitle");
 const noteContent = document.querySelector('#noteContent');
 
-export function openNotes() {
+export const openNotes=()=> {
     notesApp.classList.add("show-element");
     renderNotes();
 }
 
-export function closeNotes() { 
+export const closeNotes=()=> { 
     notesApp.classList.remove('show-element')
 }
 
-export function saveNote() { 
+export const saveNote=()=> { 
     const titleContent = noteTitle.value ? noteTitle.value : "New Note";
     console.log(noteTitle.value);
     console.log(titleContent);
@@ -29,7 +29,7 @@ export function saveNote() {
     noteContent.value = "";
 }
 
-export function renderNotes() { 
+export const renderNotes=()=> { 
     notesList.replaceChildren();
     let currentNotes = [];
     if (window.sessionStorage.getItem("notes")) {
@@ -45,7 +45,7 @@ export function renderNotes() {
     }
 }
 
-export function deleteNote(currentNote) { 
+export const deleteNote=(currentNote)=> { 
     const currentNotesList = JSON.parse(window.sessionStorage.getItem('notes'));
     const newNotesList = currentNotesList.filter(note => {
         return note.id != currentNote.getAttribute('id')
@@ -56,7 +56,7 @@ export function deleteNote(currentNote) {
     noteContent.value = "";
 }
 
-export function showNote(titleNode){ 
+export const showNote=(titleNode)=>{ 
     const currentNotesList = JSON.parse(window.sessionStorage.getItem("notes"));
     let activeNoteId = titleNode.getAttribute('id');
     let currentNote = currentNotesList.find(note => note.id == activeNoteId);

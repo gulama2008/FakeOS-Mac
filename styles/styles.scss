@@ -8,7 +8,7 @@
 }
 
 body{
-    // position: relative;
+    position: relative;
     height: 100vh;
     background-image: url('../assets/mac-os-ventura-light-5k-do-1440x900.jpg');
     @include mixins.flex(column,space-between,stretch);
@@ -134,15 +134,21 @@ body{
   transform: translateY(0);
   opacity: 1;
 }
-
-.app-notes{
-    @include mixins.flex(column,flex-start,stretch);
+.app{
     align-self: center;
     height: 600px;
     width: 700px;
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 20px;
+}
+
+.app-notes{
+    position: absolute;
+    top:50px;
+    left:300px;
+    @include mixins.flex(column,flex-start,stretch);
     &__nav{
         @include mixins.flex(row,space-around,center);
         height: 50px;
@@ -212,13 +218,7 @@ body{
     }
 }
 
-.hide-element{
-    display: none;
-}
 
-.show-element{
-    display: block;
-}
 
 .notes-list{
     list-style: none;
@@ -231,5 +231,101 @@ body{
 
 .current-note{
     background-color: #ffe491;
+}
+
+.app-photos{
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    @include mixins.flex(row,center,stretch);
+    &__nav{
+        width: 25%;
+        height: 100%;
+        background-color: #e3dddc;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    &__main{
+        width: 75%;
+    }
+}
+
+.nav__icon-container--close{
+    @include mixins.flex(row,flex-start,center);
+    height: 50px;
+    padding-left: 20px;
+}
+
+.app-photos__nav__menu{
+    color: #a39d9c;
+    margin: 0px 10px;
+
+}
+
+.photos__section{
+    padding: 10px;
+    font-size: 13px;
+}
+
+.photos__submenu-list{
+    list-style: none;
+    cursor: default;
+    &__item{
+        color: #474646;
+        font-size: 14px;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+}
+
+.active-photos-submenu{
+    background-color: #4c9fff;
+    color: white;
+}
+
+.app-photos__main{
+    &__header{
+        height: 50px;
+        cursor: default;
+        @include mixins.flex(row,center,center);
+        &__span{
+            padding: 5px 15px;
+            font-size: 14px;
+            color: #737373;
+            border-radius: 5px;
+        }
+    }
+    &__gallery{
+        @include mixins.flex(row,center,flex-start);
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 10px;
+    }
+}
+
+.app-photos__main__header__span-container{
+    @include mixins.flex(row,center,center);
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+}
+
+.with-border{
+    border-right: 1px solid #f2f2f2;;
+}
+
+.gallery__photo{
+    width: 30%;
+}
+
+.active-header-menu{
+    background-color:#f2f2f2 ;
+}
+
+.hide-element{
+    visibility:hidden;
+}
+
+.show-element{
+    visibility: visible;
 }
 
