@@ -11,6 +11,8 @@ body{
     position: relative;
     height: 100vh;
     background-image: url('../assets/mac-os-ventura-light-5k-do-1440x900.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     @include mixins.flex(column,space-between,stretch);
     
 }
@@ -109,6 +111,10 @@ body{
     opacity: 0;
 }
 
+.email-icon{
+    cursor: default;
+}
+
 .end-of-browser{
     align-self: stretch;
     height: 2px;
@@ -146,8 +152,8 @@ body{
 
 .app-notes{
     position: absolute;
-    top:50px;
-    left:300px;
+    top:40px;
+    left:320px;
     @include mixins.flex(column,flex-start,stretch);
     &__nav{
         @include mixins.flex(row,space-around,center);
