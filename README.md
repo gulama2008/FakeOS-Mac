@@ -2,6 +2,8 @@
 
 This is a fake MacOS for desktop, it has a wallpaper, selectable icons and fake apps will be opened when clicking on some certain icon. The desktop looks exactly like the real MacOS.
 
+### 🚀 [Launch Live Project](https://gulama2008.github.io/FakeOS-Mac/)
+
 ## Table of Contents
 
 - [Snippets](#snippets)
