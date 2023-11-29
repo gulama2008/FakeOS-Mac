@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a63a61f3e0.js" crossorigin="anonymous"></script>
+    <script defer type="module" src="./script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="top-menu">
+        <div class="toolbar">
+            <ul class="list toolbar__list" id="toolbar">
+                <!-- <li class="list__item toolbar__list__item apple-icon" id="appleIcon"><i class="fa-brands fa-apple fa-lg apple-icon__img" id="appleIconImg"></i></li> -->
+                <li class="list__item" id="appleIcon"><i class="fa-brands fa-apple fa-lg" id="appleIconImg"></i></li>
+                
+                <li class="list__item toolbar__list__item" id="finder">Finder</li>
+                
+                <li class="list__item toolbar__list__item" id="file">File</li>
+                <li class="list__item toolbar__list__item" id="edit">Edit</li>
+                <li class="list__item toolbar__list__item" id="view">View</li>
+                <li class="list__item toolbar__list__item" id="go">Go</li>
+                <li class="list__item toolbar__list__item" id="window">Window</li>
+                <li class="list__item toolbar__list__item" id="help">Help</li>
+            </ul>
+            <div class="sub-menu-container sub-menu-container--apple-icon" id="subMenuAppleIcon">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">About This Mac</li>
+                    <li class="sub-menu-container__list__item">System Settings...</li>
+                    <li class="sub-menu-container__list__item">App Store...</li>
+                    <li class="sub-menu-container__list__item">Sleep</li>
+                    <li class="sub-menu-container__list__item">Restart...</li>
+                    <li class="sub-menu-container__list__item">Shut Down...</li>
+                    <li class="sub-menu-container__list__item">Lock Screen</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--finder" id="subMenuFinder">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">About Finder</li>
+                    <li class="sub-menu-container__list__item">Settings...</li>
+                    <li class="sub-menu-container__list__item">Empty Bin...</li>
+                    <li class="sub-menu-container__list__item">Services</li>
+                    <li class="sub-menu-container__list__item">Hide Finder</li>
+                    <li class="sub-menu-container__list__item">Hide Others</li>
+                    <li class="sub-menu-container__list__item">Show All</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--file" id="subMenuFile">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">New Finder Window</li>
+                    <li class="sub-menu-container__list__item">New Folder</li>
+                    <li class="sub-menu-container__list__item">New Folder with Selection</li>
+                    <li class="sub-menu-container__list__item">New Smart Folder</li>
+                    <li class="sub-menu-container__list__item">New Tab</li>
+                    <li class="sub-menu-container__list__item">Open</li>
+                    <li class="sub-menu-container__list__item">Get Info</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--edit" id="subMenuEdit">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Undo Rename</li>
+                    <li class="sub-menu-container__list__item">Redo</li>
+                    <li class="sub-menu-container__list__item">Cut</li>
+                    <li class="sub-menu-container__list__item">Copy</li>
+                    <li class="sub-menu-container__list__item">Paste</li>
+                    <li class="sub-menu-container__list__item">Select All</li>
+                    <li class="sub-menu-container__list__item">Show Clipboard</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--view" id="subMenuView">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Use Stacks</li>
+                    <li class="sub-menu-container__list__item">Sort By</li>
+                    <li class="sub-menu-container__list__item">Clean Up</li>
+                    <li class="sub-menu-container__list__item">Hide Sidebar</li>
+                    <li class="sub-menu-container__list__item">Hide Toolbar</li>
+                    <li class="sub-menu-container__list__item">Show All Tabs</li>
+                    <li class="sub-menu-container__list__item">Show View Options</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--go" id="subMenuGo">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Up</li>
+                    <li class="sub-menu-container__list__item">Down</li>
+                    <li class="sub-menu-container__list__item">Previous Item</li>
+                    <li class="sub-menu-container__list__item">Next Item</li>
+                    <li class="sub-menu-container__list__item">Go to Page...</li>
+                    <li class="sub-menu-container__list__item">Back</li>
+                    <li class="sub-menu-container__list__item">Forward</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--window" id="subMenuWindow">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Minimise</li>
+                    <li class="sub-menu-container__list__item">Zoom</li>
+                    <li class="sub-menu-container__list__item">Remove Window from Set</li>
+                    <li class="sub-menu-container__list__item">Show Previous Tab</li>
+                    <li class="sub-menu-container__list__item">Show Next Tab</li>
+                    <li class="sub-menu-container__list__item">Bring All to Front</li>
+                    <li class="sub-menu-container__list__item">Documents</li>
+                </ul>
+            </div>
+            <div class="sub-menu-container sub-menu-container--help" id="subMenuHelp">
+                <ul class="sub-menu-container__list">
+                    <li class="sub-menu-container__list__item">Tips for Your Mac</li>
+                    <li class="sub-menu-container__list__item">macOS Help</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="statusbar">
+            <ul class="list statusbar__list">
+                <li class="list__item statusbar__list__item"><img src="./assets/battery.png" alt="" class="list__item__battery"></li>
+                <li class="list__item statusbar__list__item"><i class="fa-solid fa-wifi"></i></li>
+                <li class="list__item statusbar__list__item"><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="list__item statusbar__list__item" id="dateAndTime"></li>
+                <!-- <li class="list__item statusbar__list__item"></li> -->
+            </ul>
+        </div>
+    </nav>
+    <div class="app app-notes hide-element">
+        <div class="app-notes__nav">
+            <div class="nav__icon-container nav__icon-container--small-gap">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close-notes">
+                <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+                <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+            </div>
+            <div class="nav__icon-container">
+                <img src="./assets/list-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/gallery-view-icon.png" alt="" class="nav__icon-container__img">
+            </div>
+            <div class="nav__icon-container">
+                <img src="./assets/notes-bin-icon.png" alt="" class="nav__icon-container__img" id="deleteNoteIcon">
+            </div>
+            <div class="nav__icon-container">
+                <img src="./assets/create-note-icon.png" alt="" class="nav__icon-container__img" id="createNoteIcon">
+                <img src="./assets/save-icon.png" alt="" class="nav__icon-container__img" id="saveNoteIcon">
+            </div>
+            <div class="nav__icon-container">
+                <img src="./assets/text-style-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/checklist-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/table-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/photo-browser-icon.png" alt="" class="nav__icon-container__img">
+            </div>   
+            <div class="nav__icon-container">
+                <img src="./assets/add-link-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/share-icon.png" alt="" class="nav__icon-container__img">
+                <img src="./assets/search-icon.png" alt="" class="nav__icon-container__img">
+            </div>
+        </div>
+        <div class="app-notes__main">
+            <aside class="main__titles" >
+                <ul class="main__titles__list" id="notesList">
+
+                </ul>
+            </aside>
+            <div class="main__content">
+                <input type="text" class="main__content__title" id="noteTitle" placeholder="Note Title">
+                <textarea class="main__content__text" id="noteContent"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="app apps app-photos hide-element">
+        <div class="apps__nav app-photos__nav">
+            <div class="nav__icon-container nav__icon-container--small-gap nav__icon-container--close">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close-photos">
+                <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+                <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">Photos</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item active-submenu">Library</li>
+                    <li class="menu__submenu-list__item">Memories</li>
+                    <li class="menu__submenu-list__item">People</li>
+                    <li class="menu__submenu-list__item">Places</li>
+                    <li class="menu__submenu-list__item">Recent</li>
+                    <li class="menu__submenu-list__item">Imports</li>
+                </ul>
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">Albums</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item">Media Types</li>
+                    <li class="menu__submenu-list__item">Shared Albums</li>
+                    <li class="menu__submenu-list__item">My Albums</li>
+                </ul>
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">Projects</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item">My Projects</li>
+                </ul>
+            </div>
+        </div>
+        <div class="apps__main">
+            <div class="apps__main__header">
+                <div class="apps__main__header__span-container">
+                    <span class="apps__main__header__span with-border app-photos__main__header__span">Years</span>
+                    <span class="apps__main__header__span with-border app-photos__main__header__span">Months</span>
+                    <span class="apps__main__header__span with-border app-photos__main__header__span">Days</span>
+                    <span class="apps__main__header__span active-header-menu app-photos__main__header__span">All Photos</span>
+                </div>
+                
+            </div>
+            <div class="apps__main__content">
+                <img class="gallery__photo" src="./assets/pet.webp" alt="">
+                <img class="gallery__photo" src="./assets/blog.webp" alt="">
+                <img class="gallery__photo" src="./assets/movie.webp" alt="">
+                <img class="gallery__photo" src="./assets/shopping.webp" alt="">
+                <img class="gallery__photo" src="./assets/weather.webp" alt="">
+                <img class="gallery__photo" src="./assets/note.webp" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="app apps app-finder hide-element">
+        <div class="apps__nav app-finder__nav">
+            <div class="nav__icon-container nav__icon-container--small-gap nav__icon-container--close">
+                <img src="./assets/close-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small icon--close-finder">
+                <img src="./assets/minimize-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+                <img src="./assets/fullscreen-icon.png" alt="" class="nav__icon-container__img nav__icon-container__img--small">
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">Favourites</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item active-submenu">AirDrop</li>
+                    <li class="menu__submenu-list__item">Recent</li>
+                    <li class="menu__submenu-list__item">Application</li>
+                    <li class="menu__submenu-list__item">Desktop</li>
+                    <li class="menu__submenu-list__item">Documents</li>
+                    <li class="menu__submenu-list__item">Downloads</li>
+                </ul>
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">iCloud</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item">iCloud Drive</li>
+                    <li class="menu__submenu-list__item">Shared</li>
+                </ul>
+            </div>
+            <div class="apps__nav__menu">
+                <div class="menu__section">Locations</div>
+                <ul class="menu__submenu-list">
+                    <li class="menu__submenu-list__item">Network</li>
+                </ul>
+            </div>
+        </div>
+        <div class="apps__main">
+            <div class="apps__main__header finder__header">
+                <div class="nav__icon-container">
+                    <img src="./assets/arrow-left-icon.png" alt="" class="nav__icon-container__img">
+                    <img src="./assets/arrow-right-icon.png" alt="" class="nav__icon-container__img">
+                    <span class="finder__header--recent">Recent</span>
+                </div>
+                <div class="nav__icon-container">
+                    <img src="./assets/gallery-view-icon.png" alt="" class="nav__icon-container__img finder__header--gallary-view active-header-menu">
+                    <img src="./assets/list-icon.png" alt="" class="nav__icon-container__img">
+                </div>
+                <div class="nav__icon-container">
+                    <img src="./assets/add-link-icon.png" alt="" class="nav__icon-container__img">
+                    <img src="./assets/share-icon.png" alt="" class="nav__icon-container__img">
+                    <img src="./assets/search-icon.png" alt="" class="nav__icon-container__img">
+                </div>
+            </div>
+            <div class="apps__main__content">
+                <div class="finder__folder">
+                    <img class="finder__folder__icon" src="./assets/folder-icon.png" alt="">
+                    <span class="finder__folder__name">New Folder</span>
+                </div>
+                <div class="finder__folder">
+                    <img class="finder__folder__icon" src="./assets/documents-icon.png" alt="">
+                    <span class="finder__folder__name">Documents</span>
+                </div>
+                <div class="finder__folder">
+                    <img class="finder__folder__icon" src="./assets/music-icon.png" alt="">
+                    <span class="finder__folder__name">Music</span>
+                </div>
+                <div class="finder__folder">
+                    <img class="finder__folder__icon" src="./assets/pics-icon.png" alt="">
+                    <span class="finder__folder__name">Pictures</span>
+                </div>
+                <div class="finder__folder">
+                    <img class="finder__folder__icon" src="./assets/folder-icon.png" alt="">
+                    <span class="finder__folder__name">nology</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-menu-container">
+        <section class="bottom-menu">
+            <div class="app-icon app-icon__finder"><img src="./assets/finder-icon.png" alt="" class="app-icon__img app-icon__img--finder"></div>
+            <div class="app-icon"><img src="./assets/safari-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon"><a href="mailto:email@example.com" class="email-icon" target="_blank"><img src="./assets/mail-icon.png" alt="" class="app-icon__img"></a></div>
+            <div class="app-icon app-icon__photos" ><img src="./assets/photo-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon app-icon__notes"><img src="./assets/notes-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon"><img src="./assets/app-store-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon"><img src="./assets/system-setting-icon.png" alt="" class="app-icon__img"></div>
+            <div class="app-icon"><img src="./assets/bin-icon.png" alt="" class="app-icon__img app-icon__img--bin"></div>
+        </section>
+        <div class="end-of-browser" id="endOfBrowser"></div>
+    </div>
+    
+</body>
+</html>
