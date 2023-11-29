@@ -8,8 +8,6 @@ This is a fake MacOS for desktop, it has a wallpaper, selectable icons and fake 
 - [Purpose](#purpose-of-project)
 - [Tech Stack](#tech-stack)
 - [Requirements](#requirements)
-    - [MVP](#mvp)
-    - [Bonus](#bonus)
 - [Features](#features)
 - [Known Issues](#known-issues)
 - [Future Goals](#future-goals)
